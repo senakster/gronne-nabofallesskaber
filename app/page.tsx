@@ -2,7 +2,7 @@ import { client } from "@/sanity/lib/client"
 import {getPerson} from "@/sanity/lib/queries"
 import {Person} from "@/components/Card"
 
-export default async function Home() {
+async function Home() {
   const pageData = await getPerson()
   // console.log(pageData)
   return (
@@ -15,3 +15,5 @@ export default async function Home() {
     </main>
   )
 }
+
+export default Home
