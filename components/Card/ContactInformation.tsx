@@ -6,7 +6,7 @@ const ContactInformation = (contact: TContact) => {
     return (
         <>
             <ul className="flex flex-col gap-2 my-auto">
-                <li className={`flex flex-wrap`}><span>Adresse: </span><span>{address}</span><span>{city}</span> <span>{postal}</span></li>
+                <li className={`flex flex-wrap`}><span>Adresse: </span><span>{address}</span> <span>{postal}</span> <span>{city}</span></li>
                 <li className={`flex flex-wrap`}><span>Tlf.: </span><span><a href={`tel:${phone}`}>{phone}</a></span></li>
                 <li className={`flex flex-wrap`}><span>Email: </span><span><a href={`mailto:${email}`}>{email}</a></span></li>
             </ul>
