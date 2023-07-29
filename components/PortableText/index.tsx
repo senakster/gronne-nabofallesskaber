@@ -87,7 +87,7 @@ const baseSerializers: Partial<PortableTextReactComponents> = {
 
 export const PortableTextSerialized = ({ value }: PortableTextProps<any>) => {
     return (
-        <div className={`__PORTABLETEXT flex flex-col ${'gap-y-2'}`}>
+        <div className={`__PORTABLETEXT flex flex-col ${'gap-y-1'}`}>
             <PortableText value={value} components={baseSerializers} />
         </div>
     );

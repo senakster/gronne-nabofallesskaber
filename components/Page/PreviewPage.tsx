@@ -8,9 +8,9 @@ import Page from "@/components/Page";
 import gPage from "@/sanity/lib/queries/groqSnippets/gPage";
 
 export default function PreviewPage({
-    page = [],
+    page,
 }: {
-    page: SanityDocument[];
+    page: SanityDocument
 }) {
     const [data] = useLiveQuery(page, gPage);
 

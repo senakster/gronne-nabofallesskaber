@@ -5,9 +5,7 @@ import Navigation from '@/components/Layout/Navigation'
 import Footer from '@/components/Layout/Footer'
 import { draftMode } from "next/headers"
 import PreviewProvider from "@/components/PreviewProvider"
-// import PreviewPage from "@/components/Page/PreviewPage"
-// import gPage from "@/sanity/lib/queries/groqSnippets/gPage"
-// import { client } from "@/sanity/lib/client"
+import PreviewPage from "@/components/Page/PreviewPage"
 
 async function Home() {
   const preview = draftMode().isEnabled
@@ -19,8 +17,8 @@ async function Home() {
         <Navigation />
         <Container>
           <main className="__MAIN">
-            {/* <PreviewPage page={...pageData} /> */}
-            <Page {...pageData} />
+            <PreviewPage page={pageData} />
+            {/* <Page {...pageData} /> */}
           </main>
         </Container>
         <Footer />

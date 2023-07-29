@@ -17,8 +17,8 @@ async function PageRoute() {
                 <Navigation />
                 <Container>
                     <main className="__MAIN">
-                        {/* <PreviewPage page={...pageData} /> */}
-                        <Page {...pageData} />
+                        <PreviewPage page={pageData} />
+                        {/* <Page {...pageData} /> */}
                     </main>
                 </Container>
                 <Footer />

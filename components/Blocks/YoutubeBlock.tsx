@@ -1,7 +1,6 @@
 
 const YoutubeBlock = (props: any) => {
-    console.log({props})
-    const { url, title, id} = props
+    const { title, id} = props
     return (
         <div className={`__YoutubeBlock w-full aspect-video`}>
             <iframe
