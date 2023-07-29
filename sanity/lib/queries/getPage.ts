@@ -11,7 +11,7 @@ export const getPage = async (preview?: boolean): Promise<SanityDocument[]> => {
     return preview ? await previewClient.fetch(query)  : await client.fetch(query)
 }
 
-export const getFrontPage = async (preview?: boolean): Promise<SanityDocument[]> => {
+export const getFrontPage = async (preview?: boolean): Promise<SanityDocument> => {
     const query =groq`*[_type == 'frontpage'][0]{
         ...
     }`

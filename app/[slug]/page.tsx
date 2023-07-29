@@ -14,25 +14,27 @@ async function PageRoute() {
     if (preview) {
         return (
             <PreviewProvider>
+                <Navigation />
                 <Container>
-                    <Navigation />
                     <main className="__MAIN">
                         {/* <PreviewPage page={...pageData} /> */}
                         <Page {...pageData} />
                     </main>
-                    <Footer />
                 </Container>
+                <Footer />
             </PreviewProvider>
         );
     }
     return (
-        <Container>
+        <>
             <Navigation />
-            <main className="__MAIN">
-                <Page {...pageData} />
-            </main>
+            <Container>
+                <main className="__MAIN">
+                    <Page {...pageData} />
+                </main>
+            </Container>
             <Footer />
-        </Container>
+        </>
     )
 }
 

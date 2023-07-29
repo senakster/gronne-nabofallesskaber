@@ -1,5 +1,5 @@
 export default {
-    name: 'bannerImage',
+    name: 'bannerBlock',
     title: 'Bannerbillede',
     type: 'customImage'
 }

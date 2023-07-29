@@ -1,9 +1,9 @@
-import bannerImage from "./bannerImage"
-import map from "./map"
+import bannerBlock from "./bannerBlock"
+import mapBlock from "./mapBlock"
 import textBlock from "./textBlock"
-import youtube from "./youtube"
+import youtubeBlock from "./youtubeBlock"
 
 const blocks = [
-    textBlock, youtube, map, bannerImage,
+    textBlock, youtubeBlock, mapBlock, bannerBlock,
 ]
 export default blocks

@@ -1,5 +1,5 @@
 export default {
-    name: 'map',
+    name: 'mapBlock',
     title: 'Kort',
     type: 'object',
     fields: [
