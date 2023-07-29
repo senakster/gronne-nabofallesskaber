@@ -12,12 +12,4 @@ const getPerson= async (): Promise<TPerson[]> => {
 }`)
 }
 
-// const getPerson = async (): Promise<TPerson[]> => {
-//     return await client.fetch(groq`*[_type == 'person']{
-//     name,
-//     contact,
-//     portrait,
-//     "blur": portrait.asset->{metadata.lqip}
-//     }`)
-// }
 export default getPerson

@@ -1,4 +1,4 @@
-import { SanityAsset, SanityImageObject, SanityReference } from "@sanity/image-url/lib/types/types"
+import { SanityImageObject } from "@sanity/image-url/lib/types/types"
 
 export type TPortrait = SanityImageObject 
 &

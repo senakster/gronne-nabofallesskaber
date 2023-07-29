@@ -5,7 +5,7 @@ const internalReferenceRender = (props: PropsWithChildren ) => (
     <span style= {{ textDecoration: 'underline' }}> { props.children } </span>
 );
 
-export default {
+const portableText = {
     title: 'Tekstblok',
     name: 'portableText',
     type: 'array',
@@ -87,3 +87,5 @@ export default {
         },
     ],
 };
+
+export default portableText

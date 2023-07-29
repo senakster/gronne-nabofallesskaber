@@ -1,3 +1,4 @@
 import getPerson from "./getPerson"
+import {getPage, getFrontPage} from "./getPage"
 
-export {getPerson}
+export {getPerson, getPage, getFrontPage}
