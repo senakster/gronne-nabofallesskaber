@@ -3,11 +3,13 @@
 import { SanityDocument } from "next-sanity";
 import ContentBlocks from "@/components/ContentBlocks";
 
+
 const Page = (props: SanityDocument ) => {    
-    const {contentBlocks} = props
-    console.log({props})
+    const {title, hero, contentBlocks, seo} = props
+    // console.log({props})
     return (
         <div className={`__PAGE`}>
+            <h1 className={`text-4xl`}>{title}</h1>
             <ContentBlocks {...{contentBlocks}}/>
         </div>
     )

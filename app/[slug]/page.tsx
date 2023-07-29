@@ -7,6 +7,7 @@ import { draftMode } from "next/headers"
 import PreviewProvider from "@/components/PreviewProvider"
 import PreviewPage from "@/components/Page/PreviewPage"
 
+
 async function PageRoute() {
     const preview = draftMode().isEnabled
     const pageData = await getFrontPage(preview)

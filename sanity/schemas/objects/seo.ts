@@ -12,6 +12,11 @@ export default {
             name: 'description',
             title: 'SEO-description',
             type: 'text',
+        },
+        {
+            name: 'image',
+            title: 'Open Graph Image',
+            type: 'image',
         }
     ]
 }
