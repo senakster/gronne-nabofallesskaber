@@ -10,7 +10,7 @@ const ContentBlocks = (props: {contentBlocks: any[]}) => {
     return (
         <section className={`__ContentBlocks`}>
             <div className="content">
-                {contentBlocks.map &&
+                {contentBlocks?.map &&
                     contentBlocks.map((b: { _type: string}, i: number) => {
                         const blocktype = (Object.keys(Blocks).find(k => `${b._type.charAt(0).toUpperCase()}${b._type.slice(1)}` === k) || 'MissingBlock') as keyof typeof Blocks
                         const Block = Blocks[blocktype]

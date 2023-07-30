@@ -8,7 +8,7 @@ const Portrait = (props: TPortrait) => {
     return (
         <div className={`__Portrait w-full h-[50%] relative`}>
             <Image 
-            style={{objectPosition: `${hotspot?.x || 50}% ${hotspot?.y || 50}%`}}
+            style={{ objectPosition: `${(hotspot?.x || 0.5) * 100}% ${(hotspot?.y || 0.5) * 100}%`}}
             src={imgUrl}
             blurDataURL={assetMeta.blur}
             fill={true}

@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-const GPortrait = groq`"portrait": {
+const gPortrait = groq`"portrait": {
         ...portrait, 
         "assetMeta": {...portrait.asset, 
             ...portrait.asset->{
@@ -9,4 +9,5 @@ const GPortrait = groq`"portrait": {
         }
 },`
 
-export default GPortrait
+
+export default gPortrait

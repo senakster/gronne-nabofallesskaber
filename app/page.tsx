@@ -12,7 +12,10 @@ type Props = {
   params: { id: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
-
+type PageProps = {
+  params: {}
+  searchParams: { [key: string]: string | string[] | undefined }
+}
 export async function generateMetadata(
   props: Props,
   parent: ResolvingMetadata
@@ -32,13 +35,24 @@ export async function generateMetadata(
   return {
     title,
     description,
-    // openGraph: {
-    //     images: ['/some-specific-page-image.jpg', ...previousImages],
-    // },
+    openGraph: {
+      title,
+      description,
+      // url: '',
+      siteName: 'Grønne Nabofællesskaber',
+      // images: [image, ...previousImages],
+      // //           {
+      // // url: 'https://nextjs.org/og.png',
+      // //   width: 800,
+      // //     height: 600,
+      // //     },
+      locale: 'da_DK',
+      type: 'website',
+    },
   }
 }
 
-async function Home() {
+async function Home({params, searchParams}: PageProps) {
   const preview = draftMode().isEnabled
   const pageData = await getFrontPage(preview)
 
@@ -46,12 +60,10 @@ async function Home() {
     return (
       <PreviewProvider>
         <Navigation />
-        <Container>
           <main className="__MAIN">
             <PreviewPage page={pageData} />
             {/* <Page {...pageData} /> */}
           </main>
-        </Container>
         <Footer />
       </PreviewProvider>
     );
@@ -59,11 +71,9 @@ async function Home() {
   return (
     <>
       <Navigation />
-      <Container>
         <main className="__MAIN">
           <Page {...pageData} />
         </main>
-      </Container>
       <Footer />
     </>
   )
